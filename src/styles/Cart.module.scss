@@ -1,0 +1,78 @@
+@use "./colors.module";
+
+.cartContainer {
+  z-index: 2;
+  position: absolute;
+  width: 360px;
+  height: 245px;
+  left: -180px;
+  top: 1.5rem;
+  border-radius: 15px;
+  margin-top: 30px;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 10px 18px -7px colors.$Dark-grayish-blue;
+  h3 {
+    margin: 0 0 15px 15px;
+  }
+  hr {
+    border: none;
+    height: 1px;
+    background-color: colors.$Grayish-blue;
+  }
+
+  .emptyCart {
+    color: colors.$Dark-grayish-blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  .product {
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .imageOfProduct {
+      width: 15%;
+      height: 15%;
+      border-radius: 5px;
+      margin-right: 20px;
+    }
+    .infoOfProduct {
+      color: colors.$Dark-grayish-blue;
+    }
+    .delete {
+      width: 13px;
+      height: 15px;
+      border: none;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  .checkout {
+    width: 100%;
+    height: 55px;
+    background-color: colors.$Orange;
+    color: white;
+    border: 1px solid colors.$Orange;
+    border-radius: 10px;
+    margin-top: 20px;
+    &:hover {
+      cursor: pointer;
+      opacity: 0.7;
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .cartContainer {
+    position: fixed;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 40%;
+  }
+}

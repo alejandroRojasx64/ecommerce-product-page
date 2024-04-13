@@ -1,0 +1,226 @@
+@use "./colors.module";
+main {
+  margin: 90px 150px;
+  display: flex;
+  padding: 0 50px;
+  align-items: center;
+  z-index: 1;
+  .imagesProduct {
+    display: flex;
+    flex-direction: column;
+    width: 444px;
+    height: 567px;
+
+    .shownImage {
+      border-radius: 4%;
+      width: 444px;
+      height: 445px;
+      margin-bottom: 30px;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .previewImage {
+      display: flex;
+      justify-content: space-between;
+
+      .image {
+        width: 88px;
+        height: 88px;
+        border-radius: 10%;
+        overflow: hidden;
+        img {
+          width: 100%;
+          height: 100%;
+          &:hover {
+            cursor: pointer;
+            opacity: 0.7;
+          }
+        }
+      }
+    }
+  }
+
+  .productDescriptionContainer {
+    width: 450px;
+    height: 425px;
+    margin-left: 125px;
+    .companyName {
+      color: colors.$Orange;
+      font-weight: 700;
+      letter-spacing: 2px;
+      font-size: 14px;
+    }
+    .productTitle {
+      padding: 15px 25px 25px 0;
+    }
+    .productDescription {
+      color: colors.$Dark-grayish-blue;
+      line-height: 1.5rem;
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+
+    .priceDiscount {
+      width: 30%;
+      align-items: center;
+      margin-bottom: 10px;
+      .price {
+        display: inline;
+        margin-right: 1.5rem;
+      }
+      .discount {
+        color: colors.$Orange;
+        background-color: colors.$Pale-orange;
+        border-radius: 5px;
+        font-weight: 600;
+        font-size: 14px;
+        padding: 2px 5px;
+      }
+    }
+    .previousPrice {
+      text-decoration: line-through;
+      color: colors.$Grayish-blue;
+    }
+    .buyButtons {
+      display: flex;
+      margin-top: 45px;
+      .buttonsContainer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-right: 5%;
+        width: 35%;
+        height: 55px;
+        background-color: colors.$Light-grayish-blue;
+        border-radius: 10px;
+        button {
+          background-color: rgba(0, 0, 0, 0);
+          border: none;
+          width: 25%;
+          height: 100%;
+          &:hover {
+            cursor: pointer;
+            opacity: 0.7;
+          }
+        }
+        .totalProducts {
+          font-weight: 700;
+        }
+      }
+      .addToCart {
+        width: 60%;
+        border: none;
+        border-radius: 10px;
+        background-color: colors.$Orange;
+        color: white;
+        font-weight: 600;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+          margin-right: 15px;
+          width: 15px;
+          height: 15px;
+        }
+        &:hover {
+          cursor: pointer;
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1170px) {
+  main {
+    flex-direction: column;
+    margin-top: 1rem;
+    .imagesProduct {
+      margin-bottom: 2rem;
+    }
+
+    .productDescriptionContainer {
+      margin-top: 5px;
+      margin-left: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 880px) {
+  main {
+    .imagesProduct {
+      position: relative;
+      margin-bottom: 0;
+      height: auto;
+      .prevButton {
+        position: absolute;
+        left: 10px;
+        top: 40%;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: hidden;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 5px 0 0;
+        &:hover {
+          cursor: pointer;
+        }
+        &:hover #path {
+          stroke: colors.$Orange;
+        }
+      }
+      .nextButton {
+        position: absolute;
+        right: 10px;
+        top: 40%;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: hidden;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 0 0 5px;
+        &:hover {
+          cursor: pointer;
+        }
+        &:hover #path {
+          stroke: colors.$Orange;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  main {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  main {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    .imagesProduct {
+      width: 100%;
+      height: auto;
+      .shownImage {
+        border-radius: 0%;
+        width: 100%;
+        height: auto;
+      }
+    }
+    .productDescriptionContainer {
+      width: 100%;
+      padding: 0 1rem;
+    }
+  }
+}

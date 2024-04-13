@@ -1,0 +1,119 @@
+@use "./colors.module";
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.7);
+  .imagesProduct {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2.5rem;
+
+    .buttonOfClosed {
+      border: none;
+      background-color: rgba(0, 0, 0, 0);
+      position: absolute;
+      right: 1px;
+      top: -2rem;
+      margin: 0 0 15px 0;
+      svg {
+        transform: scale(1.3);
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      &:hover #path {
+        fill: colors.$Orange;
+      }
+    }
+
+    .activeImage {
+      position: relative;
+      width: 550px;
+      height: 550px;
+      .prevButton {
+        position: absolute;
+        left: -30px;
+        top: 40%;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: hidden;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 5px 0 0;
+        &:hover {
+          cursor: pointer;
+        }
+        &:hover #path {
+          stroke: colors.$Orange;
+        }
+      }
+      .nextButton {
+        position: absolute;
+        right: -30px;
+        top: 40%;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: hidden;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 0 0 5px;
+        &:hover {
+          cursor: pointer;
+        }
+        &:hover #path {
+          stroke: colors.$Orange;
+        }
+      }
+
+      .shownImage {
+        border-radius: 4%;
+        width: 550px;
+        height: 550px;
+        margin-bottom: 30px;
+      }
+    }
+
+    .previewImage {
+      display: flex;
+      justify-content: center;
+      margin: 2rem auto;
+      .image {
+        background-color: white;
+        width: 88px;
+        height: 88px;
+        margin: 1rem;
+        border-radius: 10%;
+        overflow: hidden;
+        img {
+          width: 100%;
+          height: 100%;
+
+          &:hover {
+            cursor: pointer;
+            border: 2px solid colors.$Orange;
+            opacity: 0.5;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 880px) {
+  .modal {
+    display: none;
+  }
+}
