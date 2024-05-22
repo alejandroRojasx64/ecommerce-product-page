@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   name: "Fall Limited Edition Sneakers",
-  img: "../../public/images/image-product-1.jpg",
+  img: "images/image-product-1.jpg",
   price: 125,
   totalOfProducts: 0,
   cartIsOpen: false,
