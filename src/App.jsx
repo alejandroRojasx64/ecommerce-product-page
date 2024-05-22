@@ -1,5 +1,5 @@
 import ProductComponent from "./components/ProductComponent";
-import NavBar from "c:/Users/Alejandro/Desktop/Proyectos/frontEndMentor/ecommerceProductPageMain/ecommerce/src/components/NavBar";
+import NavBar from "./components/NavBar";
 
 function App() {
   return (
