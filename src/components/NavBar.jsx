@@ -40,7 +40,7 @@ const NavBar = () => {
               </label>
             </div>
 
-            <img src="../../public/images/logo.svg" />
+            <img src="images/logo.svg" />
             <div ref={navListRef} className={styles.navList}>
               <span className={styles.listItem}>Collections</span>
               <span className={styles.listItem}>Man</span>
@@ -84,10 +84,7 @@ const NavBar = () => {
               </span>
             </span>
             {cartIsOpen && <Cart />}
-            <img
-              src="../../public/images/image-avatar.png"
-              className={styles.userImage}
-            />
+            <img src="images/image-avatar.png" className={styles.userImage} />
           </div>
         </nav>
       </div>

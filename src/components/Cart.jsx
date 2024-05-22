@@ -37,7 +37,7 @@ const Cart = () => {
               onClick={handleDeleteProductToCart}
               className={styles.delete}
             >
-              <img src="../../public/images/icon-delete.svg" />
+              <img src="/images/icon-delete.svg" />
             </button>
           </span>
           <button className={styles.checkout}>Checkout</button>

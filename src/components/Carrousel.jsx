@@ -83,7 +83,7 @@ const Carrousel = () => {
               </svg>
             </button>
             <img
-              src={`../../public/images/image-product-${indexCarrouselImage}.jpg`}
+              src={`images/image-product-${indexCarrouselImage}.jpg`}
               className={styles.shownImage}
               alt="shoes"
             />
@@ -131,7 +131,7 @@ const Carrousel = () => {
                   handleSelectImage(e);
                 }}
                 id={1}
-                src="../../public/images/image-product-1.jpg"
+                src="images/image-product-1.jpg"
                 alt="shoes1"
               />
             </span>
@@ -142,7 +142,7 @@ const Carrousel = () => {
                   handleSelectImage(e);
                 }}
                 id={2}
-                src="../../public/images/image-product-2.jpg"
+                src="images/image-product-2.jpg"
                 alt="shoes2"
               />
             </span>
@@ -153,7 +153,7 @@ const Carrousel = () => {
                   handleSelectImage(e);
                 }}
                 id={3}
-                src="../../public/images/image-product-3.jpg"
+                src="images/image-product-3.jpg"
                 alt="shoes3"
               />
             </span>
@@ -164,7 +164,7 @@ const Carrousel = () => {
                   handleSelectImage(e);
                 }}
                 id={4}
-                src="../../public/images/image-product-4.jpg"
+                src="images/image-product-4.jpg"
                 alt="shoes4"
               />
             </span>

@@ -115,7 +115,7 @@ const ProductComponent = () => {
             onClick={(e) => {
               handleMainImageClick(e);
             }}
-            src={`../../public/images/image-product-${indexImage}.jpg`}
+            src={`images/image-product-${indexImage}.jpg`}
             id={indexImage}
             className={`${styles.shownImage}`}
             alt="shoes"
@@ -169,7 +169,7 @@ const ProductComponent = () => {
                     handleSelectImage(e);
                   }}
                   id={1}
-                  src="../../public/images/image-product-1.jpg"
+                  src="images/image-product-1.jpg"
                   alt="shoes1"
                 />
               </span>
@@ -180,7 +180,7 @@ const ProductComponent = () => {
                     handleSelectImage(e);
                   }}
                   id={2}
-                  src="../../public/images/image-product-2.jpg"
+                  src="images/image-product-2.jpg"
                   alt="shoes2"
                 />
               </span>
@@ -191,7 +191,7 @@ const ProductComponent = () => {
                     handleSelectImage(e);
                   }}
                   id={3}
-                  src="../../public/images/image-product-3.jpg"
+                  src="images/image-product-3.jpg"
                   alt="shoes3"
                 />
               </span>
@@ -202,7 +202,7 @@ const ProductComponent = () => {
                     handleSelectImage(e);
                   }}
                   id={4}
-                  src="../../public/images/image-product-4.jpg"
+                  src="images/image-product-4.jpg"
                   alt="shoes4"
                 />
               </span>
@@ -228,18 +228,18 @@ const ProductComponent = () => {
                 onClick={handleDecrement}
                 className={styles.decrementToProduct}
               >
-                <img alt="minus" src="../../public/images/icon-minus.svg" />
+                <img alt="minus" src="images/icon-minus.svg" />
               </button>
               <span className={styles.totalProducts}>{numberOfProducts}</span>
               <button
                 onClick={handleIncrement}
                 className={styles.incrementToProduct}
               >
-                <img alt="plus" src="../../public/images/icon-plus.svg" />
+                <img alt="plus" src="images/icon-plus.svg" />
               </button>
             </div>
             <button onClick={handleAddToCart} className={styles.addToCart}>
-              <img alt="cart" src="../../public/cart.svg" />
+              <img alt="cart" src="cart.svg" />
               Add to cart
             </button>
           </div>
